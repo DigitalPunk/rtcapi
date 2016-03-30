@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name='keywords' content='WebRTC, HTML5, JavaScript'/>
+    <meta name='description' content='WebRTC Reference App'/>
+    <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1'>
+
+    <base target='_blank'>
+
+    <title>WebRTC client</title>
+
+    <!-- <link rel='stylesheet' href='css/main.css' /> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    -->
+    <!-- Latest compiled and minified JavaScript
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+     -->
+</head>
+
+<body>
+
+<div class='container'>
+
+    <div id='videos' class="row">
+        <video id='localVideo' autoplay muted></video>
+        <video id='remoteVideo' autoplay></video>
+    </div>
+
+    <div class="row">
+        <button id="btn1" class="btn btn-succes">Call</button>
+        <button id="btn2" class="btn btn-primary">Accept</button>
+        <button id="btn3" class="btn btn-danger ">Hang Up</button>
+    </div>
+    <div id="chat" class="row"></div>
+    <div class="row">
+        <input type="text" id="message" value="input your msg"/>
+        <button class="btn btn-default" onclick="sendbutton();">Send msg</button>
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src='webrtcClient.js'></script>
+
+</body>
+</html>
